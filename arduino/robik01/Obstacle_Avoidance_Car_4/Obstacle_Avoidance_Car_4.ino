@@ -107,7 +107,7 @@ void setup()
 void loop() 
 { 
     myservo.write(90);//setservo position according to scaled value
-    delay(1000); 
+    //delay(1000); 
     middleDistance = Distance_test();
     #ifdef send
     Serial.print("middleDistance=");
@@ -118,17 +118,20 @@ void loop()
     { 
       _mForward(); //All clear, move forward!
     }
-    else if (middleDistance <=25){
+    else {
       _mStop(); //Object detected! Stop the robot and check left and right for the better way out!
-      Serial.print("check rigtht first");
-      myservo.write(10);//setservo position according to scaled value
+      //Serial.print("check rigtht first");
+      myservo.write(10);//setservo position according to scaled value regarde à droite
       delay(500); 
       rightDistance = Distance_test();
       Serial.print("rightDistance=");
       Serial.println(rightDistance);
 
-      if (rightDistance > middleDistance){
+      if (rightDistance >= middleDistance){
+          
           _mright();
+          myservo.write(90);//setservo position according to scaled value
+          delay(1000); 
       }
       
     }                
