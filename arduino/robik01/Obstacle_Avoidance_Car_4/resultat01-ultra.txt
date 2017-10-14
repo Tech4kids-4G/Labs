@@ -1,0 +1,501 @@
+Stop!
+ premiere fois middleDistance ++ : 0
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+
+Distance in cm=289.54
+middleDistance ++ : 289
+
+Distance in cm=287.01
+middleDistance ++ : 576
+
+Distance in cm=3100.65
+middleDistance ++ : 3676
+
+Distance in cm=287.10
+middleDistance ++ : 3963
+
+Distance in cm=286.69
+middleDistance ++ : 4249
+
+
+la valeur de i apres 90 = 5
+middleDistance=849
+
+
+Distance in cm=138.94
+right45 ++ : 138
+
+Distance in cm=136.75
+right45 ++ : 274
+
+Distance in cm=138.52
+right45 ++ : 412
+
+Distance in cm=136.83
+right45 ++ : 548
+
+la valeur de i  aprea right45 = 4
+la distance à right45= 137
+
+
+Distance in cm=265.79
+left45 ++ : 265
+
+Distance in cm=315.93
+left45 ++ : 580
+
+Distance in cm=3114.59
+left45 ++ : 3694
+
+Distance in cm=3092.10
+left45 ++ : 6786
+
+la valeur de i  aprea left45 = 4
+la distance à  left45= 1696
+
+
+retour à la position initial du servo 90° 
+go forward!
+
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=287.55
+middleDistance ++ : 287
+
+Distance in cm=288.69
+middleDistance ++ : 575
+
+Distance in cm=286.59
+middleDistance ++ : 861
+
+Distance in cm=287.03
+middleDistance ++ : 1148
+
+Distance in cm=288.71
+middleDistance ++ : 1436
+
+la valeur de i apres 90 = 5
+middleDistance=287
+
+
+
+Distance in cm=136.41
+right45 ++ : 136
+
+Distance in cm=139.79
+right45 ++ : 275
+
+Distance in cm=140.64
+right45 ++ : 415
+
+Distance in cm=138.11
+right45 ++ : 553
+
+la valeur de i  aprea right45 = 4
+la distance à right45= 138
+
+
+
+Distance in cm=42.38
+left45 ++ : 42
+
+Distance in cm=3106.44
+left45 ++ : 3148
+
+Distance in cm=3098.57
+left45 ++ : 6246
+
+Distance in cm=43.88
+left45 ++ : 6289
+
+la valeur de i  aprea left45 = 4
+la distance à  left45= 1572
+
+
+retour à la position initial du servo 90° 
+go forward!
+
+
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=286.42
+middleDistance ++ : 286
+Distance in cm=282.44
+middleDistance ++ : 568
+Distance in cm=286.08
+middleDistance ++ : 854
+Distance in cm=285.74
+middleDistance ++ : 1139
+Distance in cm=237.81
+middleDistance ++ : 1376
+la valeur de i apres 90 = 5
+middleDistance=275
+Distance in cm=138.94
+right45 ++ : 138
+Distance in cm=136.58
+right45 ++ : 274
+Distance in cm=138.94
+right45 ++ : 412
+Distance in cm=143.00
+right45 ++ : 555
+la valeur de i  aprea right45 = 4
+la distance à right45= 138
+Distance in cm=45.90
+left45 ++ : 45
+Distance in cm=284.89
+left45 ++ : 329
+Distance in cm=280.48
+left45 ++ : 609
+Distance in cm=282.61
+left45 ++ : 891
+la valeur de i  aprea left45 = 4
+la distance à  left45= 222
+retour à la position initial du servo 90° 
+go forward!
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=287.25
+middleDistance ++ : 287
+Distance in cm=290.79
+middleDistance ++ : 577
+Distance in cm=289.78
+middleDistance ++ : 866
+Distance in cm=288.30
+middleDistance ++ : 1154
+Distance in cm=237.81
+middleDistance ++ : 1391
+la valeur de i apres 90 = 5
+middleDistance=278
+Distance in cm=140.22
+right45 ++ : 140
+Distance in cm=137.19
+right45 ++ : 277
+Distance in cm=137.70
+right45 ++ : 414
+Distance in cm=137.02
+right45 ++ : 551
+la valeur de i  aprea right45 = 4
+la distance à right45= 137
+Distance in cm=43.47
+left45 ++ : 43
+Distance in cm=45.93
+left45 ++ : 88
+Distance in cm=556.43
+left45 ++ : 644
+Distance in cm=47.58
+left45 ++ : 691
+la valeur de i  aprea left45 = 4
+la distance à  left45= 172
+retour à la position initial du servo 90° 
+go forward!
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=8.01
+middleDistance ++ : 8
+
+Distance in cm=7.70
+middleDistance ++ : 15
+
+Distance in cm=7.17
+middleDistance ++ : 22
+
+Distance in cm=6.09
+middleDistance ++ : 28
+
+Distance in cm=6.61
+middleDistance ++ : 34
+
+la valeur de i apres 90 = 5
+middleDistance=6
+
+
+
+
+Distance in cm=138.94
+right45 ++ : 138
+
+Distance in cm=7.19
+right45 ++ : 145
+
+Distance in cm=7.60
+right45 ++ : 152
+
+Distance in cm=7.29
+right45 ++ : 159
+
+la valeur de i  aprea right45 = 4
+la distance à right45= 39
+
+
+
+
+Distance in cm=289.73
+left45 ++ : 289
+
+Distance in cm=3116.85
+left45 ++ : 3405
+
+Distance in cm=47.50
+left45 ++ : 3452
+
+Distance in cm=50.01
+left45 ++ : 3502
+
+la valeur de i  aprea left45 = 4
+la distance à  left45= 875
+
+
+retour à la position initial du servo 90° 
+Stop!
+go back!
+Stop!
+distance des 3 mésures: middleDistance,right45,left45 : 6 , 39 , 875
+ 
+le servo est 5°
+
+Distance in cm=131.41
+Distance in cm=57.94
+Distance in cm=47.28
+Distance in cm=38.71
+rightDistance à 5° =68
+
+
+distance des 3 mésures: middleDistance,right45,left45 : 6 , 39 , 875
+ le servo est 180°
+Distance in cm=57.41
+Distance in cm=6.17
+Distance in cm=45.75
+Distance in cm=50.05
+leftDistance=39
+
+
+retour à la position 90° décision en cour si :  rightDistance > leftDistance 
+rightDistance = 68
+leftDistance = 39
+go right!
+
+###################   FIN  _mright ############################################# 
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=7.19
+middleDistance ++ : 7
+
+Distance in cm=7.12
+middleDistance ++ : 14
+
+Distance in cm=6.82
+middleDistance ++ : 20
+
+Distance in cm=6.72
+middleDistance ++ : 26
+
+Distance in cm=7.29
+middleDistance ++ : 33
+
+la valeur de i apres 90 = 5
+middleDistance=6
+Distance in cm=138.02
+right45 ++ : 138
+Distance in cm=138.53
+right45 ++ : 276
+Distance in cm=137.60
+right45 ++ : 413
+Distance in cm=139.35
+right45 ++ : 552
+la valeur de i  aprea right45 = 4
+la distance à right45= 138
+Distance in cm=46.65
+left45 ++ : 46
+Distance in cm=46.55
+left45 ++ : 92
+Distance in cm=46.31
+left45 ++ : 138
+Distance in cm=46.56
+left45 ++ : 184
+la valeur de i  aprea left45 = 4
+la distance à  left45= 46
+retour à la position initial du servo 90° 
+Stop!
+go back!
+Stop!
+distance des 3 mésures: middleDistance,right45,left45 : 6 , 138 , 46
+ le servo est 5°
+Distance in cm=111.64
+Distance in cm=57.65
+Distance in cm=47.69
+Distance in cm=37.76
+rightDistance à 5° =63
+distance des 3 mésures: middleDistance,right45,left45 : 6 , 138 , 46
+ le servo est 180°
+Distance in cm=37.79
+Distance in cm=112.68
+Distance in cm=6.51
+Distance in cm=92.75
+leftDistance=61
+retour à la position 90° décision en cour si :  rightDistance > leftDistance 
+rightDistance = 63
+leftDistance = 61
+go right!
+###################   FIN  _mright ############################################# 
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=289.51
+middleDistance ++ : 289
+Distance in cm=289.12
+middleDistance ++ : 578
+Distance in cm=287.54
+middleDistance ++ : 865
+Distance in cm=288.78
+middleDistance ++ : 1153
+Distance in cm=287.25
+middleDistance ++ : 1440
+la valeur de i apres 90 = 5
+middleDistance=288
+Distance in cm=137.85
+right45 ++ : 137
+Distance in cm=138.09
+right45 ++ : 275
+Distance in cm=136.49
+right45 ++ : 411
+Distance in cm=137.00
+right45 ++ : 548
+la valeur de i  aprea right45 = 4
+la distance à right45= 137
+Distance in cm=39.90
+left45 ++ : 39
+Distance in cm=40.72
+left45 ++ : 79
+Distance in cm=40.83
+left45 ++ : 119
+Distance in cm=42.08
+left45 ++ : 161
+la valeur de i  aprea left45 = 4
+la distance à  left45= 40
+retour à la position initial du servo 90° 
+Stop!
+go back!
+Stop!
+distance des 3 mésures: middleDistance,right45,left45 : 288 , 137 , 40
+ le servo est 5°
+Distance in cm=111.64
+Distance in cm=57.19
+Distance in cm=48.62
+Distance in cm=38.25
+rightDistance à 5° =63
+distance des 3 mésures: middleDistance,right45,left45 : 288 , 137 , 40
+ le servo est 180°
+Distance in cm=115.23
+Distance in cm=92.33
+Distance in cm=145.67
+Distance in cm=55.54
+leftDistance=101
+retour à la position 90° décision en cour si :  rightDistance > leftDistance 
+rightDistance = 63
+leftDistance = 101
+go left!
+###################   FIN  _mleft ############################################# 
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=277.73
+middleDistance ++ : 277
+Distance in cm=276.90
+middleDistance ++ : 553
+Distance in cm=279.11
+middleDistance ++ : 832
+Distance in cm=278.60
+middleDistance ++ : 1110
+Distance in cm=279.14
+middleDistance ++ : 1389
+la valeur de i apres 90 = 5
+middleDistance=277
+Distance in cm=42.38
+right45 ++ : 42
+Distance in cm=41.16
+right45 ++ : 83
+Distance in cm=41.43
+right45 ++ : 124
+Distance in cm=41.22
+right45 ++ : 165
+la valeur de i  aprea right45 = 4
+la distance à right45= 41
+Distance in cm=43.35
+left45 ++ : 43
+Distance in cm=43.25
+left45 ++ : 86
+Distance in cm=43.25
+left45 ++ : 129
+Distance in cm=42.94
+left45 ++ : 171
+la valeur de i  aprea left45 = 4
+la distance à  left45= 42
+retour à la position initial du servo 90° 
+Stop!
+go back!
+Stop!
+distance des 3 mésures: middleDistance,right45,left45 : 277 , 41 , 42
+ le servo est 5°
+Distance in cm=275.66
+Distance in cm=278.04
+Distance in cm=278.19
+Distance in cm=279.05
+rightDistance à 5° =277
+distance des 3 mésures: middleDistance,right45,left45 : 277 , 41 , 42
+ le servo est 180°
+Distance in cm=90.27
+Distance in cm=92.11
+Distance in cm=24.82
+Distance in cm=150.88
+leftDistance=89
+retour à la position 90° décision en cour si :  rightDistance > leftDistance 
+rightDistance = 277
+leftDistance = 89
+go right!
+###################   FIN  _mright ############################################# 
+initiatiosation des variables middleDistance, right45, left45  : 0 , 0 , 0
+###################   DEBUT  pour une nouvelle mesure ############################################# 
+Stop!
+Distance in cm=44.93
+middleDistance ++ : 44
+Distance in cm=45.34
+middleDistance ++ : 89
+Distance in cm=43.86
+middleDistance ++ : 132
+Distance in cm=44.68
+middleDistance ++ : 176
+Distance in cm=44.98
+middleDistance ++ : 220
+la valeur de i apres 90 = 5
+middleDistance=44
+Distance in cm=3817.86
+right45 ++ : 3817
+Distance in cm=41.16
+right45 ++ : 3858
+Distance in cm=45.29
+right45 ++ : 3903
+Distance in cm=3792.00
+right45 ++ : 7695
+la valeur de i  aprea right45 = 4
+la distance à right45= 1923
+Distance in cm=3093.80
+left45 ++ : 3093
+Distance in cm=43.15
+left45 ++ : 3136
+Distance in cm=3102.21
+left45 ++ : 6238
+Distance in cm=41.14
+left45 ++ : 6279
+la valeur de i  aprea left45 = 4
+la distance à  left45= 1569
+retour à la position initial du servo 90° 
+Stop!
+go back!
+Stop!
