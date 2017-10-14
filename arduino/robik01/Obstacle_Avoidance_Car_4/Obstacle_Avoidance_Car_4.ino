@@ -81,10 +81,10 @@ int Distance_test()
   digitalWrite(Trig, LOW);   
   float Fdistance = pulseIn(Echo, HIGH);  
   //Fdistance= Fdistance/58; 
-  float distance_mm = Fdistance / 2.0 * SOUND_SPEED / 10;   
-  Serial.print("Distance=");
-  Serial.println(distance_mm);   
-  return (int)distance_mm;
+  float distance_cm = Fdistance / 2.0 * SOUND_SPEED / 10 ;   
+  Serial.print("Distance in cm=");
+  Serial.println(distance_cm);   
+  return (int)distance_cm;
 }  
 
 void setup() 
@@ -102,37 +102,45 @@ void setup()
   pinMode(ENB,OUTPUT);
   
   _mStop();
+  myservo.write(90);//setservo position according to scaled value
+  delay(1000); 
+ 
 } 
 
 void loop() 
 { 
-    myservo.write(90);//setservo position according to scaled value
-    //delay(1000); 
-    middleDistance = Distance_test();
-    #ifdef send
-    Serial.print("middleDistance=");
-    Serial.println(middleDistance);
-    #endif
-
+  middleDistance = Distance_test();
+  #ifdef send
+  Serial.print("middleDistance=");
+  Serial.println(middleDistance);
+   #endif
+    
     if(middleDistance>25)
     { 
       _mForward(); //All clear, move forward!
     }
-    else {
+    else {  // distance middleDistance <= 25 
       _mStop(); //Object detected! Stop the robot and check left and right for the better way out!
-      //Serial.print("check rigtht first");
+      Serial.println("check rigtht first");
       myservo.write(10);//setservo position according to scaled value regarde à droite
-      delay(500); 
+      delay(1000); 
       rightDistance = Distance_test();
+      //delay(1000); 
       Serial.print("rightDistance=");
       Serial.println(rightDistance);
 
-      if (rightDistance >= middleDistance){
+      if (rightDistance > middleDistance){
           
+         Serial.print("rightDistance >  middleDistance :");
+         Serial.println(rightDistance >  middleDistance);
+         Serial.println("set servo 90° go");
+         myservo.write(90);//setservo position according to scaled value regarde à droite
+          delay(1000);
           _mright();
-          myservo.write(90);//setservo position according to scaled value
-          delay(1000); 
-      }
+           delay(1000);
+          _mStop();
+          _mForward();
+       }
       
     }                
 }
