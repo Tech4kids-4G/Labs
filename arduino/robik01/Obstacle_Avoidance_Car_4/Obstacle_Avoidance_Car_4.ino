@@ -82,16 +82,25 @@ int Distance_test()
   digitalWrite(Trig, LOW);   
   float Fdistance = pulseIn(Echo, HIGH);  
   //Fdistance= Fdistance/58; 
-  float distance_cm = Fdistance / 2.0 * SOUND_SPEED / 10 ;   
-  Serial.print("Distance in cm=");
-  Serial.println(distance_cm);   
+  float distance_cm = Fdistance / 2.0 * SOUND_SPEED / 10 ;    
+  int_printfln(distance_cm,"Distance in cm = "); 
   return (int)distance_cm;
 }  
 
+// print int value with message
+void int_printfln(int value, String message){
+  Serial.print("int_printfln -- > " + message + " ");
+  Serial.println(value);   
+}
+
+// print string value with message
+void int_printfln(String value, String message){
+  Serial.print("string_printfln -- > " + message + " ");
+  Serial.println(value);   
+}
 void setup() 
 { 
-  myservo.attach(3);// attach servo on pin 3 to servo object
- 
+  myservo.attach(3);// attach servo on pin 3 to servo object 
   Serial.begin(9600);     
   pinMode(Echo, INPUT);    
   pinMode(Trig, OUTPUT);  
@@ -102,146 +111,117 @@ void setup()
   pinMode(ENA,OUTPUT);
   pinMode(ENB,OUTPUT);
   _mStop();
-   // OGM---------------------
-     Serial.print(" premiere fois middleDistance : ");
-     Serial.println(middleDistance);
-     //----------------
-
+  int_printfln(middleDistance, "premiere fois middleDistance : ");
 } 
 
-void alog2(){
+void init_variables(){
+  rightDistance = 0;
+  leftDistance = 0;
+  middleDistance = 0;
+  distance = 0 ;
+  right45=0;
+  left45=0;
+  Serial.print("initiatiosation des variables middleDistance, right45, left45  : ");
+  Serial.print(middleDistance);  Serial.print(" , "); Serial.print(right45);Serial.print(" , "); Serial.println(left45);  
+}
 
-rightDistance = 0;
-leftDistance = 0;
-middleDistance = 0;
-distance = 0 ;
-right45=0;
-left45=0;
 
- Serial.print("initiatiosation des variables middleDistance, right45, left45  : ");
- Serial.print(middleDistance);  Serial.print(" , "); Serial.print(right45);Serial.print(" , "); Serial.println(left45);
-  Serial.println("###################   DEBUT  pour une nouvelle mesure ############################################# ");
-  _mStop();
-    myservo.write(90);//setservo position according to scaled value
-    delay(100); 
-    for(i=0; i <= 4; ++i) {
+void getMiddleDistance(){
+  myservo.write(90);//setservo position according to scaled value
+  delay(100);
+  for(i=0; i <= 4; ++i) {
       middleDistance += Distance_test();
-     // OGM---------------------
-     Serial.print("middleDistance ++ : ");
-     Serial.println(middleDistance);
-     //----------------
       delay(50); 
     }
-    // OGM--------------------------------
-    Serial.print("la valeur de i apres 90 = ");
-    Serial.println(i);
-    //------------------------------------
-    middleDistance /= i; // middleDistance = middleDistance / i
-    Serial.print("middleDistance=");
-    Serial.println(middleDistance);
-    
-    myservo.write(45);//setservo position according to scaled value
-    delay(300); 
-    for(i=0; i <= 3; ++i) {
+  int_printfln(middleDistance /= i, "MiddleDistance cm: ");
+}
+
+void getRightDistance(){
+  myservo.write(10);//setservo position according to scaled value
+  delay(100);
+  for(i=0; i <= 3; ++i) {
+      rightDistance += Distance_test();
+      delay(50); 
+    }
+  int_printfln(rightDistance /= i, "Right distance cm: ");
+}
+void getRight45Distance(){
+  myservo.write(45);//setservo position according to scaled value
+  delay(100);
+  for(i=0; i <= 3; ++i) {
       right45 += Distance_test();
-       // OGM---------------------
-     Serial.print("right45 ++ : ");
-     Serial.println(right45);
-     //----------------
-      delay(100); 
+      delay(50); 
     }
-    
-     // OGM--------------------------------
-    Serial.print("la valeur de i  aprea right45 = ");
-    Serial.println(i);
-    //------------------------------------
-    right45 /= i;
-    Serial.print("la distance à right45= ");
-    Serial.println(right45);
+  int_printfln(right45 /= i, "Right45 cm: ");
+}
 
-    myservo.write(135);//setservo position according to scaled value
-    delay(300); 
-    for(i=0; i <= 3; ++i) {
+void getLeft45Distance(){
+  myservo.write(135);//setservo position according to scaled value
+  delay(100);
+  for(i=0; i <= 3; ++i) {
       left45 += Distance_test();
-     // OGM---------------------
-     Serial.print("left45 ++ : ");
-     Serial.println(left45);
-     //----------------
-      delay(100); 
+      delay(50); 
     }
-      // OGM--------------------------------
-    Serial.print("la valeur de i  aprea left45 = ");
-    Serial.println(i);
-    //------------------------------------
-    left45 /= i;
-    Serial.print("la distance à  left45= ");
-    Serial.println(left45);
+  int_printfln(left45 /= i, "Left45 cm: ");
+}
+void getLeftDistance(){
+  myservo.write(180);//setservo position according to scaled value
+  delay(100);
+  for(i=0; i <= 3; ++i) {
+      leftDistance += Distance_test();
+      delay(50); 
+    }
+  int_printfln(leftDistance /= i, "Left distance cm: ");
+}
 
-    
-      // OGM--------------------------------
-    Serial.println("retour à la position initial du servo 90° ");
-     //------------------------------------
-    myservo.write(90);//setservo position according to scaled value
+void setServo90(){
+  Serial.println("\nRetour à la position initial du servo 90° ");
+  myservo.write(90);//setservo position according to scaled value
+}
 
-    if(middleDistance<=50 || right45<=50 || left45<=50)
+void alog2()
+{
+
+ init_variables();
+ Serial.println("###################   DEBUT  pour une nouvelle mesure ############################################# ");
+  _mStop();
+  getMiddleDistance();
+  getRight45Distance();   
+  getLeft45Distance();
+  setServo90();
+  Serial.print("\nDistance des 3 mésures: middleDistance,right45,left45 : ");
+  Serial.println(middleDistance);  Serial.print(" , "); Serial.print(right45);Serial.print(" , "); Serial.println(left45);
+
+  if(middleDistance<=50 || right45<=50 || left45<=50)
     {     
       _mStop();
-      delay(300);                         
+      delay(50);                         
       _mBack();
-      delay(300);
-      _mStop();
-      delay(500);                         
-      myservo.write(5);          
-      delay(150); //avant 100     
-      // OGM--------------------------------
-      Serial.print("distance des 3 mésures: middleDistance,right45,left45 : ");
-      Serial.print(middleDistance);  Serial.print(" , "); Serial.print(right45);Serial.print(" , "); Serial.println(left45);
-      Serial.println(" le servo est 5°");
-    //------------------------------------
-      for(i=0; i <= 3; ++i) {
-        rightDistance += Distance_test();
-        delay(150); // avant 100
-      }
-      rightDistance /= i;
-      Serial.print("rightDistance à 5° =");
-      Serial.println(rightDistance);
-      delay(100);                                                  
-      myservo.write(180);  
-       // OGM--------------------------------
-      Serial.print("distance des 3 mésures: middleDistance,right45,left45 : ");
-      Serial.print(middleDistance);  Serial.print(" , "); Serial.print(right45);Serial.print(" , "); Serial.println(left45);
-      Serial.println(" le servo est 180°");
-    //------------------------------------            
-      delay(150); // avant 100
-      for(i=0; i <= 3; ++i) {
-        leftDistance += Distance_test();
-        delay(150); 
-      }
-      leftDistance /= i;
-      Serial.print("leftDistance=");
-      Serial.println(leftDistance);
-
-      
-      myservo.write(90);    
+      delay(100);
+      getRightDistance(); // servo 10°
+      delay(100);  
+      getLeftDistance(); // servo 180°                                                
+      delay(100); 
+      setServo90();    
       Serial.println("retour à la position 90° décision en cour si :  rightDistance > leftDistance ");
-      Serial.print("rightDistance = ");  Serial.println (rightDistance);
-      Serial.print("leftDistance = ");  Serial.println (leftDistance);            
+      int_printfln(rightDistance, "rightDistance =");
+      int_printfln(leftDistance, "leftDistance =");       
       if(rightDistance>leftDistance)  
       {
         _mright();
-        delay(150);
+        delay(100);
         Serial.println("###################   FIN  _mright ############################################# ");
        }
        else if(rightDistance<leftDistance)
        {
         _mleft();
         delay(100);
-         Serial.println("###################   FIN  _mleft ############################################# ");
+        Serial.println("###################   FIN  _mleft ############################################# ");
        }
-       else if((rightDistance<=30)||(leftDistance<=30))
+       else if((rightDistance<=50)||(leftDistance<=50))
        {
         _mBack();
-        delay(500);
+        delay(100);
         Serial.println("###################   FIN  _mBack ############################################# ");
        }
        else
@@ -252,7 +232,7 @@ left45=0;
     }  
     else
         _mForward();   
-        delay(500);
+        delay(300);
                   
   }
 
