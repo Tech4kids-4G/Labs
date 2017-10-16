@@ -75,16 +75,19 @@ void _mStop()
  /*Ultrasonic distance measurement Sub function*/
 int Distance_test()   
 {
-  digitalWrite(Trig, LOW);   
-  delayMicroseconds(2);
-  digitalWrite(Trig, HIGH);  
-  delayMicroseconds(20);
-  digitalWrite(Trig, LOW);   
-  float Fdistance = pulseIn(Echo, HIGH);  
-  //Fdistance= Fdistance/58; 
-  float distance_cm = Fdistance / 2.0 * SOUND_SPEED / 10 ;    
-  int_printfln(distance_cm,"Distance in cm = "); 
-  return (int)distance_cm;
+
+  /* 1. Lance une mesure de distance en envoyant une impulsion HIGH de 10µs sur la broche TRIGGER */
+  digitalWrite(Trig, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(Trig, LOW);
+  /* 2. Mesure le temps entre l'envoi de l'impulsion ultrasonique et son écho (si il existe) */
+  long measure = pulseIn(Echo, HIGH, MEASURE_TIMEOUT);
+  /* 3. Calcul la distance à partir du temps mesuré */
+  float distance_mm = measure / 2.0 * SOUND_SPEED;
+  int_printfln(distance_mm / 10,"Distance in cm = "); 
+  delay(500);
+  return (int)distance_mm / 10;
+
 }  
 
 // print int value with message
@@ -103,7 +106,8 @@ void setup()
   myservo.attach(3);// attach servo on pin 3 to servo object 
   Serial.begin(9600);     
   pinMode(Echo, INPUT);    
-  pinMode(Trig, OUTPUT);  
+  pinMode(Trig, OUTPUT);
+  digitalWrite(Trig, LOW);
   pinMode(in1,OUTPUT);
   pinMode(in2,OUTPUT);
   pinMode(in3,OUTPUT);
