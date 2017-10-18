@@ -115,7 +115,7 @@ void setup()
   pinMode(ENA,OUTPUT);
   pinMode(ENB,OUTPUT);
   _mStop();
-  int_printfln(middleDistance, "premiere fois middleDistance : ");
+  Serial.println("setup : Fin initiatiosation! ");
 } 
 
 void init_variables(){
@@ -125,57 +125,67 @@ void init_variables(){
   distance = 0 ;
   right45=0;
   left45=0;
-  Serial.print("initiatiosation des variables middleDistance, right45, left45  : ");
-  Serial.print(middleDistance);  Serial.print(" , "); Serial.print(right45);Serial.print(" , "); Serial.println(left45);  
+//  Serial.print("initiatiosation des variables middleDistance, right45, left45, distance, rightDistance, leftDistance  : ");
+//  Serial.print(middleDistance);Serial.print(" , "); 
+//  Serial.print(right45);Serial.print(" , "); 
+//  Serial.print(left45); Serial.print(" , ");
+//  Serial.print(distance);Serial.print(" , ");
+//  Serial.print(rightDistance);Serial.print(" , ");
+//  Serial.println(leftDistance);
 }
 
 
 void getMiddleDistance(){
+  Serial.println("Le calcule de la distance en position 90° est cours....  ");
   myservo.write(90);//setservo position according to scaled value
   delay(100);
-  for(i=0; i <= 4; ++i) {
+  for(i=0; i <= 2; ++i) {
       middleDistance += Distance_test();
       delay(50); 
     }
-  int_printfln(middleDistance /= i, "MiddleDistance cm: ");
+  int_printfln(middleDistance /= i, "La ditance mésurée en position 90° (MiddleDistance) cm: ");
 }
 
 void getRightDistance(){
-  myservo.write(10);//setservo position according to scaled value
+  Serial.println("Le calcule de la distance en position 0° est cours....  ");
+  myservo.write(0);//setservo position according to scaled value
   delay(100);
-  for(i=0; i <= 3; ++i) {
+  for(i=0; i <= 1; ++i) {
       rightDistance += Distance_test();
       delay(50); 
     }
-  int_printfln(rightDistance /= i, "Right distance cm: ");
+  int_printfln(rightDistance /= i, "La ditance mésurée en position 0° (Right) cm: ");
 }
 void getRight45Distance(){
+  Serial.println("Le calcule de la distance en position 45° est cours....  ");
   myservo.write(45);//setservo position according to scaled value
   delay(100);
-  for(i=0; i <= 3; ++i) {
+  for(i=0; i <= 1; ++i) {
       right45 += Distance_test();
       delay(50); 
     }
-  int_printfln(right45 /= i, "Right45 cm: ");
+  int_printfln(right45 /= i, "La ditance mésurée en position 45° (Right45) cm : ");
 }
 
 void getLeft45Distance(){
+  Serial.println("Le calcule de la distance en position 135° est cours....  ");
   myservo.write(135);//setservo position according to scaled value
   delay(100);
-  for(i=0; i <= 3; ++i) {
+  for(i=0; i <= 1; ++i) {
       left45 += Distance_test();
       delay(50); 
     }
-  int_printfln(left45 /= i, "Left45 cm: ");
+  int_printfln(left45 /= i,"La ditance mésurée en position 135° (Left45) cm : ");
 }
 void getLeftDistance(){
+  Serial.println("Le calcule de la distance en position 180° est cours....  ");
   myservo.write(180);//setservo position according to scaled value
   delay(100);
-  for(i=0; i <= 3; ++i) {
+  for(i=0; i <= 1; ++i) {
       leftDistance += Distance_test();
       delay(50); 
     }
-  int_printfln(leftDistance /= i, "Left distance cm: ");
+  int_printfln(leftDistance /= i,"La ditance mésurée en position 180° (Left) cm : ");
 }
 
 void setServo90(){
@@ -183,104 +193,94 @@ void setServo90(){
   myservo.write(90);//setservo position according to scaled value
 }
 
+void sort(int a[], int size){
+  
+//  for(int k=0 ; k<5;k++){
+//     Serial.print("\n vant la boucle value : "); Serial.println(a[k]); 
+//    }
+    
+  for(int s=0 ; s<(size-1);s++){
+    for(int t=0 ; t<(size-(s+1));t++){
+      if(a[t] > a[t+1]){
+        int l = a[t];
+        a[t] = a[t+1];
+        a[t+1] = l;
+        }
+      } 
+    }
+//   for(int k=0 ; k<5;k++){
+//     Serial.print("\n value : "); Serial.println(a[k]); 
+//    }
+   Serial.print("\nMIN value : "); Serial.print(a[0]); 
+   Serial.print("\nMAX value : "); Serial.println(a[4]); 
+}
+
+void sortWithIndex(int a[],char c[], int size){
+     
+  for(int s=0 ; s<(size-1);s++){
+    for(int t=0 ; t<(size-(s+1));t++){
+      if(a[t] > a[t+1]){
+        int l = a[t];
+        char dc = c[t];
+        a[t] = a[t+1];
+        c[t] = c[t+1];
+        a[t+1] = l;
+        c[t+1] = dc;
+        }
+      } 
+    }
+
+   Serial.print("\nMIN value : "); Serial.print(a[0]); Serial.print("direction : "); Serial.print(c[0]);
+   Serial.print("\nMAX value : "); Serial.print(a[4]); ; Serial.print("direction : "); Serial.println(c[4]);
+}
+
+char getDirection(int a[],char c[], int size){
+  sortWithIndex(a,c,size);
+  return c[4];
+}
+
 void alog2()
 {
 
- init_variables();
- Serial.println("###################   DEBUT  pour une nouvelle mesure ############################################# ");
-  _mStop();
+  init_variables();
+  Serial.println("###################   DEBUT  pour une nouvelle mesure ############################################# ");   
   getMiddleDistance();
-  getRight45Distance();   
+  getRight45Distance();
+  getRightDistance();   
   getLeft45Distance();
+  getLeftDistance();
   setServo90();
-  Serial.print("\nDistance des 3 mésures: middleDistance,right45,left45 : ");
-  Serial.println(middleDistance);  Serial.print(" , "); Serial.print(right45);Serial.print(" , "); Serial.println(left45);
-
-  if(middleDistance<=50 || right45<=50 || left45<=50)
-    {     
-      _mStop();
-      delay(50);                         
-      _mBack();
-      delay(100);
-      getRightDistance(); // servo 10°
-      delay(100);  
-      getLeftDistance(); // servo 180°                                                
-      delay(100); 
-      setServo90();    
-      Serial.println("retour à la position 90° décision en cour si :  rightDistance > leftDistance ");
-      int_printfln(rightDistance, "rightDistance =");
-      int_printfln(leftDistance, "leftDistance =");       
-      if(rightDistance>leftDistance)  
-      {
-        _mright();
-        delay(100);
-        Serial.println("###################   FIN  _mright ############################################# ");
-       }
-       else if(rightDistance<leftDistance)
-       {
-        _mleft();
-        delay(100);
-        Serial.println("###################   FIN  _mleft ############################################# ");
-       }
-       else if((rightDistance<=50)||(leftDistance<=50))
-       {
-        _mBack();
-        delay(100);
-        Serial.println("###################   FIN  _mBack ############################################# ");
-       }
-       else
-       {
-        _mForward();
-        Serial.println("###################   FIN  _mForward ############################################# ");
-       }
-    }  
-    else
-        _mForward();   
-        delay(300);
-                  
-  }
-
-void alogov1 (){
-    middleDistance = Distance_test();
-  #ifdef send
-  Serial.print("middleDistance=");
-  Serial.println(middleDistance);
-   #endif
-    
-    if(middleDistance>25)
-    { 
-      _mForward(); //All clear, move forward!
+  int distances[5] = {rightDistance, right45, middleDistance, left45, leftDistance};
+  char orientation[5] = {'r', 's', 'm', 'n','l'};
+  char way = getDirection(distances,orientation,5);
+  
+  if (way == 'm') { _mForward(); delay(100);}
+  else if (way == 'r' || way == 's'){
+    Serial.println("Je tourne a droite");
+    _mStop();
+    delay(100);
+    _mBack();
+    delay(500);
+    _mright();
+    delay(500);
+    _mForward();   
+    } else if (way == 'n' || way == 'l'){
+    Serial.println("Je tourne a gauche");
+    _mStop();
+    delay(100);
+    _mBack();
+    delay(500);
+    _mleft();
+    delay(500);
+    _mForward();   
     }
-    else {  // distance middleDistance <= 25 
-      _mStop(); //Object detected! Stop the robot and check left and right for the better way out!
-      Serial.println("check rigtht first");
-      myservo.write(10);//setservo position according to scaled value regarde à droite
-      delay(1000); 
-      rightDistance = Distance_test();
-      //delay(1000); 
-      Serial.print("rightDistance=");
-      Serial.println(rightDistance);
-
-      if (rightDistance > middleDistance){
-          
-         Serial.print("rightDistance >  middleDistance :");
-         Serial.println(rightDistance >  middleDistance);
-         Serial.println("set servo 90° go");
-         myservo.write(90);//setservo position according to scaled value regarde à droite
-          delay(1000);
-          _mright();
-           delay(1000);
-          _mStop();
-          _mForward();
-       }
-      
-    }  
-
+   
   }
+
 void loop() 
 { 
-alog2();
-                  
+alog2 ();
+                
 }
 
 
