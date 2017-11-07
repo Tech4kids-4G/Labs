@@ -13,7 +13,7 @@ int ENA = 5;
 int ENB = 11;
 int ABS = 150;
 int rightDistance = 0,leftDistance = 0,middleDistance = 0 ;
-void _mForward()
+void _mBack()
 {
  analogWrite(ENA,ABS);
  analogWrite(ENB,ABS);
@@ -24,7 +24,7 @@ void _mForward()
  Serial.println("go forward!");
 }
 
-void _mBack()
+void _mForward()
 {
  analogWrite(ENA,ABS);
  analogWrite(ENB,ABS);

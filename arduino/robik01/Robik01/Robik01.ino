@@ -17,7 +17,6 @@
 /*                         LIBRAIRIES                            */
 /*****************************************************************/
 #include <Servo.h> 
-#include "Arduino.h"
 #include "AffectationDesEntreesSorties.h"
 #include "DeclarationDesVariables.h"
 #include "Configuration.h"
@@ -39,28 +38,35 @@ void setup() {Initialisation();}
 /*                Algorithme définit dans la vidéo.              */
 /*                                                               */
 /*****************************************************************/
+
 void loop() {   
    RegardeToutDroit(); 
-   if(LaVoieEstLibre())
-   {
-     RegardeAGauche();      
-     if(LaVoieEstLibre()) 
-     { 
-       RegardeToutDroit();       
-       if(LaVoieEstLibre()) 
-       {
-         RegardeADroite();          
-         if(LaVoieEstLibre()) 
-         {
-           if(laVoitureEstAlArret)
-           {AvanceEnLigneDroite();}
-         }
-         else{ChercheUneIssue();}
-       }
-       else{ChercheUneIssue();}
-     }     
-     else{ChercheUneIssue();} 
-   }  
-   else{ChercheUneIssue();} 
-   delay(1);
+  
+        AvanceEnLigneDroite();
 }
+
+//void loop() {   
+//   RegardeToutDroit(); 
+//   if(LaVoieEstLibre())
+//   {
+//     RegardeAGauche();      
+//     if(LaVoieEstLibre()) 
+//     { 
+//       RegardeToutDroit();       
+//       if(LaVoieEstLibre()) 
+//       {
+//         RegardeADroite();          
+//         if(LaVoieEstLibre()) 
+//         {
+//           if(laVoitureEstAlArret)
+//           {AvanceEnLigneDroite();}
+//         }
+//         else{ChercheUneIssue();}
+//       }
+//       else{ChercheUneIssue();}
+//     }     
+//     else{ChercheUneIssue();} 
+//   }  
+//   else{ChercheUneIssue();} 
+//   delay(1);
+//}

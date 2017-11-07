@@ -4,27 +4,27 @@
   
   void Initialisation()
   {
-    pinMode(D0UT_MOTEUR_GAUCHE_1, OUTPUT);
-    digitalWrite(D0UT_MOTEUR_GAUCHE_1,LOW);
-    pinMode(D0UT_MOTEUR_GAUCHE_2, OUTPUT);
-    digitalWrite(D0UT_MOTEUR_GAUCHE_2,LOW);
+    Serial.println("setup : début initiatiosation! ");    
+    Serial.begin(9600);     
     
-    pinMode(D0UT_MOTEUR_DROIT_3 , OUTPUT);
-    digitalWrite(D0UT_MOTEUR_DROIT_3,LOW);
-    pinMode(D0UT_MOTEUR_DROIT_4 , OUTPUT);
-    digitalWrite(D0UT_MOTEUR_DROIT_4,LOW);
-    
+    pinMode(DIN_ULTRASONIC_ECHO, INPUT);    
     pinMode(DOUT_ULTRASONIC_TRIG, OUTPUT);
-    digitalWrite(DOUT_ULTRASONIC_TRIG,LOW);
-    pinMode(DIN_ULTRASONIC_ECHO, INPUT);
+    digitalWrite(DOUT_ULTRASONIC_TRIG, LOW);
     
-    digitalWrite(DOUT_MOTEUR_GAUCHE_EN,LOW);
-    digitalWrite(DOUT_MOTEUR_DROIT_EN,LOW);
+    pinMode(D0UT_MOTEUR_DROIT_1,OUTPUT);
+    pinMode(D0UT_MOTEUR_DROIT_2,OUTPUT);
+    pinMode(D0UT_MOTEUR_GAUCHE_3,OUTPUT);
+    pinMode(D0UT_MOTEUR_GAUCHE_4,OUTPUT);
+    pinMode(DOUT_MOTEUR_ENA,OUTPUT);
+    pinMode(DOUT_MOTEUR_ENB,OUTPUT);
+
+    digitalWrite(DOUT_MOTEUR_ENA,HIGH);
+    digitalWrite(DOUT_MOTEUR_ENA,HIGH);
+   
     
-    pinMode(DOUT_LED_ROUGE, OUTPUT);
-    pinMode(DOUT_LED_VERTE, OUTPUT); 
-    
-    SERVO.attach(PWM_SERVO);
+    SERVO.attach(PWM_SERVO);// attach servo on pin 3 to servo object 
     
     RegardeToutDroit();
+    
+    Serial.println("setup : Fin initiatiosation! ");   
   }
