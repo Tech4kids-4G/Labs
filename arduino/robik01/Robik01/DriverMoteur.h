@@ -4,18 +4,12 @@
 /*************************************************************/
 void AvanceEnLigneDroite()
 {
- 
-  digitalWrite(D0UT_MOTEUR_DROIT_1,HIGH);
-  digitalWrite(D0UT_MOTEUR_DROIT_2,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,HIGH);  
- 
- delay(500);
-  
+  digitalWrite(IN1,HIGH);      
+  digitalWrite(IN2,LOW);         // left wheel goes forward
+  digitalWrite(IN3,LOW);      
+  digitalWrite(IN4,HIGH);         // right wheel goes forward
   laVoitureEstAlArret = false;   
-
-  allumeLEDVerte(); 
-
+// allumeLEDVerte(); 
   Serial.println("go forward!");
 }
 
@@ -25,17 +19,17 @@ void AvanceEnLigneDroite()
 /*************************************************/
 void Arret()
 {
-  digitalWrite(D0UT_MOTEUR_DROIT_1,LOW);
-  digitalWrite(D0UT_MOTEUR_DROIT_2,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,LOW);  
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,LOW);
+  digitalWrite(IN3,LOW);
+  digitalWrite(IN4,LOW);  
  
-  digitalWrite(DOUT_MOTEUR_ENA,LOW);
-  digitalWrite(DOUT_MOTEUR_ENB,LOW);
+  digitalWrite(ENA,LOW);
+  digitalWrite(ENB,LOW);
   
   laVoitureEstAlArret = true;  
- 
-  allumeLEDOrange(); 
+  Serial.print("laVoitureEstAlArret: "); Serial.println(laVoitureEstAlArret);
+//  allumeLEDOrange(); 
 }
 
 /******************************************************/
@@ -45,27 +39,27 @@ void Arret()
 void PivoteAGauche()
 {
 
-  digitalWrite(D0UT_MOTEUR_DROIT_1,HIGH);
-  digitalWrite(D0UT_MOTEUR_DROIT_2,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,HIGH);  
+  digitalWrite(IN1,HIGH);
+  digitalWrite(IN2,LOW);
+  digitalWrite(IN3,LOW);
+  digitalWrite(IN4,HIGH);  
  
-  digitalWrite(DOUT_MOTEUR_ENA,HIGH);
-  digitalWrite(DOUT_MOTEUR_ENB,HIGH);
+  digitalWrite(ENA,HIGH);
+  digitalWrite(ENB,HIGH);
   
   delay(dureePourPivoter);
   
-  digitalWrite(DOUT_MOTEUR_ENA,LOW);
-  digitalWrite(DOUT_MOTEUR_ENB,LOW);
+  digitalWrite(ENA,LOW);
+  digitalWrite(ENB,LOW);
   
-  digitalWrite(D0UT_MOTEUR_DROIT_1,LOW);
-  digitalWrite(D0UT_MOTEUR_DROIT_2,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,LOW);  
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,LOW);
+  digitalWrite(IN3,LOW);
+  digitalWrite(IN4,LOW);  
 
   laVoitureEstAlArret = true;  
   
-  allumeLEDOrange();
+//  allumeLEDOrange();
 }
 
 /******************************************************/
@@ -75,24 +69,24 @@ void PivoteAGauche()
 void PivoteADroite()
 {
 
-  digitalWrite(D0UT_MOTEUR_DROIT_1,LOW);
-  digitalWrite(D0UT_MOTEUR_DROIT_2,HIGH); 
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,HIGH);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,LOW);  
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,HIGH); 
+  digitalWrite(IN3,HIGH);
+  digitalWrite(IN4,LOW);  
 
   
   delay(dureePourPivoter);
   
-  digitalWrite(DOUT_MOTEUR_ENA,LOW);
-  digitalWrite(DOUT_MOTEUR_ENB,LOW);
+  digitalWrite(ENA,LOW);
+  digitalWrite(ENB,LOW);
   
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,LOW);  
+  digitalWrite(IN3,LOW);
+  digitalWrite(IN4,LOW);  
  
   
   laVoitureEstAlArret = true;  
   
-  allumeLEDOrange();
+//  allumeLEDOrange();
 }
 
 /******************************************************/
@@ -102,28 +96,28 @@ void PivoteADroite()
 void DemiTour()
 {
 
-  digitalWrite(D0UT_MOTEUR_DROIT_1,LOW);
-  digitalWrite(D0UT_MOTEUR_DROIT_2,HIGH);
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,HIGH);
   
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,HIGH);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,LOW);  
+  digitalWrite(IN3,HIGH);
+  digitalWrite(IN4,LOW);  
 
-  digitalWrite(DOUT_MOTEUR_ENA,HIGH);
-  digitalWrite(DOUT_MOTEUR_ENB,HIGH);
+  digitalWrite(ENA,HIGH);
+  digitalWrite(ENB,HIGH);
   
   delay(dureeDunDemiTour);
   
-  digitalWrite(DOUT_MOTEUR_ENA,LOW);
-  digitalWrite(DOUT_MOTEUR_ENB,LOW);
+  digitalWrite(ENA,LOW);
+  digitalWrite(ENB,LOW);
   
-  digitalWrite(D0UT_MOTEUR_DROIT_1,LOW);
-  digitalWrite(D0UT_MOTEUR_DROIT_2,LOW);
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,LOW);
   
-  digitalWrite(D0UT_MOTEUR_GAUCHE_3,LOW);
-  digitalWrite(D0UT_MOTEUR_GAUCHE_4,LOW);  
+  digitalWrite(IN3,LOW);
+  digitalWrite(IN4,LOW);  
 
   
   laVoitureEstAlArret = true;  
   
-  allumeLEDRouge();
+//  allumeLEDRouge();
 }

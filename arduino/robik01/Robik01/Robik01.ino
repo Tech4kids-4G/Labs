@@ -20,12 +20,13 @@
 #include "AffectationDesEntreesSorties.h"
 #include "DeclarationDesVariables.h"
 #include "Configuration.h"
-#include "DriverLEDs.h"
+//#include "DriverLEDs.h"
 #include "DriverMoteur.h"
 #include "DriverServo.h"
 #include "DriverUltraSonicSensor.h"
 #include "Initialisation.h"
 #include "AlgorithmeQuiChercheUneIssue.h"
+#include "Test_Suite_Wheel.h"
 
 /*****************************************************************/
 /*                        INITIALISATION                         */
@@ -40,33 +41,34 @@ void setup() {Initialisation();}
 /*****************************************************************/
 
 void loop() {   
-   RegardeToutDroit(); 
-  
-        AvanceEnLigneDroite();
+//AvanceEnLigneDroite(); // ok
+//Arret(); ok 
+delay(500);
+PivoteAGauche();
 }
 
-//void loop() {   
-//   RegardeToutDroit(); 
-//   if(LaVoieEstLibre())
-//   {
-//     RegardeAGauche();      
-//     if(LaVoieEstLibre()) 
-//     { 
-//       RegardeToutDroit();       
-//       if(LaVoieEstLibre()) 
-//       {
-//         RegardeADroite();          
-//         if(LaVoieEstLibre()) 
-//         {
-//           if(laVoitureEstAlArret)
-//           {AvanceEnLigneDroite();}
-//         }
-//         else{ChercheUneIssue();}
-//       }
-//       else{ChercheUneIssue();}
-//     }     
-//     else{ChercheUneIssue();} 
-//   }  
-//   else{ChercheUneIssue();} 
-//   delay(1);
-//}
+void loop123() {   
+   RegardeToutDroit(); 
+   if(LaVoieEstLibre())
+   {
+     RegardeAGauche();      
+     if(LaVoieEstLibre()) 
+     { 
+       RegardeToutDroit();       
+       if(LaVoieEstLibre()) 
+       {
+         RegardeADroite();          
+         if(LaVoieEstLibre()) 
+         {
+           if(laVoitureEstAlArret)
+           {AvanceEnLigneDroite();}
+         }
+         else{ChercheUneIssue();}
+       }
+       else{ChercheUneIssue();}
+     }     
+     else{ChercheUneIssue();} 
+   }  
+   else{ChercheUneIssue();} 
+   delay(1);
+}
