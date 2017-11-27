@@ -1,0 +1,195 @@
+
+Tech4kids 4G
+vous présent son projet en cours de développement Tech4kids,la robotique aux service de l'éducation.
+
+
+résumer de mon projet
+---------------------
+
+Créer un club numérique autour des objets connectés. Les objets connectés ont pour objectifs de simplifier votre vie quotidienne, 
+à l'aide d'une multitude d'applications possibles.Leur point commun est qu'ils sont contrôlés par un smartphone, une tablette, nano-ordinateur(Raspberry Pi) 
+et un micro-controleur (Arduino ou autres) et partagent des informations avec ces derniers. la maitrise des objets connectés, changera la vision des futures codeurs (enfants) 
+comment s'en servir correctement de cette technologie avec moins de risque sur la santé et donc arrive à atteindre le but utime : la numerique aux service de l'éduction. Le projet propose
+3 cycles. cycle commun (de base), cycle avancée, cycle projet (production) et l'enfants passe en moniteur qui enseigne aux autres enfants avec un statut apprentis ou stagiaire.
+ 
+
+
+les objetifs : 
+
+
+	1- Créer un club numérique unique en Suisse, 
+	2- former les futures codeurs Suisse de 6 à 18 ans à fabriquer et maitriser des objets connectés (conception et programmtion)
+	3- Résaliser des projets a utiliée privé et public.
+	4- équiper le local avec les outils nécessaires pour atteindres les objectifs
+	5- Devenir le partenaire numero 1 pour les activités parascolaire dans le servteur et privé.
+        6- Se positionner le leader Suisse dans l'organisation des evenement technologie. 
+
+
+
+
+
+Services
+
+ 1 - Ateliers de conception des robots: Aider les enfants de creer leur propre robot personaliser qui réponds a leurs besoin (dessin sur papier, impression 3D, assemblage, programmation)
+ 2 - Formation dans le monde numérique - actualiter, risque , et bonne pratique.
+ 3 - Stages pour les apprentis programmation, marketing, communication, eletronique, robotique, informatique
+ 4 - Formation: initiation à la programmtion, robotique et gestion de projet
+ 5 - Evenement trimetrielle technologie coding gouter, digital, exploitation, 3D,..... 
+ 
+
+Partenaires
+
+ 1- DIP GVA
+ 2- DIP LSN
+ 3- Ecole Prive VD
+ 4- Sumsung
+ 5- Microsoft
+ 6- Apple
+ 7- Google
+ 
+
+Clients
+
+ 1 - Parents
+ 2 - Entreprise
+ 3 - Institution DIP,VD
+ 4 - Ecole privé	
+
+
+population Cible
+
+  1- Enfants de 4 à 16 ans
+
+
+Source financiers
+
+ 1- Cotisation
+ 2- Marge sur les ventes
+ 3- investisseurs
+ 4- donatteurs
+
+
+
+--------------------------------------------------------
+
+  1- réaliser un prototype:  site :
+  2- droite de propieté, 
+  3- structure
+  4- 
+
+
+
+
+
+----------------------------------------------------------
+
+  salle 100% digital  contact sunsung et microsoft
+
+  digital classroom
+
+  Samsung School: The Future of Educational Technology is Here
+
+
+ http://www.samsung.com/ch_fr/business/solutions-services/mobile-solutions/education/samsung-school
+
+
+
+
+-------------------------------------------------------
+
+
+
+
+
+
+http://www.blog-gestion-de-projet.com/quest-ce-que-le-business-model-canvas/
+http://www.revuegestion.ca/entreprendre/comment-arriver-a-une-proposition-de-valeur-innovante/
+
+
+
+Ressources
+
+  ce que vous savez
+  ce que vous connaissez  , le réseaux....
+
+
+chercher une équipe de travail à convaincre.
+
+
+
+1/ DE L'IDEE AU BUSINESS MODEL VALIDÉ  
+
+L'idée et l'équipe
+L'analyse du contexte, de son environnement 
+L'élaboration de la stratégie générale
+La définition d'un business model / projet de reprise challengé, validé, cohérent par-rapport aux objectifs
+La concurrence
+L'évaluation des ventes prévisionnelles du projet 
+
+
+2/ LA STRATEGIE MARKETING ET COMMERCIALE
+
+La politique d'offre,
+La politique de prix, 
+La stratégie commerciale,
+La stratégie de communication, 
+La stratégie de distribution,
+Le business plan
+
+3/ LA STRATEGIE FINANCIERE
+
+Les besoins financiers du projet (investissements, charges, fonds de roulement) et les choix à arbitrer par le porteur de projet (achat, location / neuf, occasion...) 
+Les grandes masses et les grands principes financiers.
+Les ratios essentiels à la gestion d'entreprise
+La viabilité financière du projet. 
+Le plan de financement
+
+	
+Contenu
+
+ 1/ DE L'IDEE AU BUSINESS MODEL VALIDÉ  
+L'idée et l'équipe
+L'analyse du contexte, de son environnement 
+L'élaboration de la stratégie générale
+La définition d'un business model / projet de reprise challengé, validé, cohérent par-rapport aux objectifs
+La concurrence
+L'évaluation des ventes prévisionnelles du projet 
+
+
+2/ LA STRATEGIE MARKETING ET COMMERCIALE
+La politique d'offre,
+La politique de prix, 
+La stratégie commerciale,
+La stratégie de communication, 
+La stratégie de distribution,
+Le business plan
+ 
+3/ LA STRATEGIE FINANCIERE
+
+Les besoins financiers du projet (investissements, charges, fonds de roulement) et les choix à arbitrer par le porteur de projet (achat, location / neuf, occasion...) 
+Les grandes masses et les grands principes financiers.
+Les ratios essentiels à la gestion d'entreprise
+La viabilité financière du projet. 
+Le plan de financement
+
+4/ LA STRATEGIE JURIDIQUE, FISCALE, SOCIALE 
+ 
+Les principes juridiques de fonctionnement d'une entreprise
+Les grands principes des régimes fiscaux et sociaux
+Le choix de la plus forme juridique, du régime fiscal et du statut social 
+Noms et marques
+
+
+5/  LES INDICATEURS DE PILOTAGE
+
+Les documents de relations contractuelles (contrats de vente, conditions générales…) et les principales obligations de ces documents
+Les interlocuteurs de l'entrepreneur (RSI, SIE, Urssaf...)
+Les indicateurs et tableaux de bord, quantitatifs et qualitatifs
+Les bons réflexes, repérer les clignotants qui doivent faire réagir
+L'utilisation du numérique pour gérer son entreprise
+  
+  
+
+
+
+

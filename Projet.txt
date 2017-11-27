@@ -1,17 +1,11 @@
 
 Tech4kids 4G
+
+play - learn - invent  (PLI)
+Jouer - apprendre - inventer  (JAI)
+
 vous présent son projet en cours de développement Tech4kids,la robotique aux service de l'éducation.
 
-
-résumer de mon projet
----------------------
-
-Créer un club numérique autour des objets connectés. Les objets connectés ont pour objectifs de simplifier votre vie quotidienne, 
-à l'aide d'une multitude d'applications possibles.Leur point commun est qu'ils sont contrôlés par un smartphone, une tablette, nano-ordinateur(Raspberry Pi) 
-et un micro-controleur (Arduino ou autres) et partagent des informations avec ces derniers. la maitrise des objets connectés, changera la vision des futures codeurs (enfants) 
-comment s'en servir correctement de cette technologie avec moins de risque sur la santé et donc arrive à atteindre le but utime : la numerique aux service de l'éduction. Le projet propose
-3 cycles. cycle commun (de base), cycle avancée, cycle projet (production) et l'enfants passe en moniteur qui enseigne aux autres enfants avec un statut apprentis ou stagiaire.
- 
 
 
 les objetifs : 
@@ -28,12 +22,13 @@ les objetifs :
 
 Services
 
- 1 - Ateliers de conception des robots: Aider les enfants de creer leur propre robot personaliser qui réponds a leurs besoin (dessin sur papier, impression 3D, assemblage, programmation)
+ 1 - Ateliers de conception des robots: Aider les enfants de concevoire leur propre robot personaliser qui réponds a leurs besoin (dessin sur papier, impression 3D, assemblage, programmation)
  2 - Formation dans le monde numérique - actualiter, risque , et bonne pratique.
- 3 - Stages pour les apprentis programmation, marketing, communication, eletronique, robotique, informatique
+ 3 - Stages pour les apprentis en programmation, marketing, communication, eletronique, robotique, informatique
  4 - Formation: initiation à la programmtion, robotique et gestion de projet
- 5 - Evenement trimetrielle technologie coding gouter, digital, exploitation, 3D,..... 
+ 5 - Organisation des evenements en relation avec technologie du numérique: coding gouter, 3D,..... 
  
+
 
 Partenaires
 
@@ -65,6 +60,17 @@ Source financiers
  2- Marge sur les ventes
  3- investisseurs
  4- donatteurs
+
+
+
+--------------------------------------------------------
+
+  1- réaliser un prototype:  site :
+  2- droite de propieté, 
+  3- structure
+  4- 
+
+
 
 
 
