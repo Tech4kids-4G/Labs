@@ -37,6 +37,8 @@ void ChercheUneIssueAGauche()
 {
   SERVO.write(completementAGauche); 
   delay(dureePostionnementServo);
+  SERVO.write(extremeAGauche); 
+  delay(dureePostionnementServo);
 }
 
 /*******************************************************/
@@ -45,5 +47,7 @@ void ChercheUneIssueAGauche()
 void ChercheUneIssueADroite()
 {
   SERVO.write(completementADroite); 
+  delay(dureePostionnementServo);
+  SERVO.write(extremeADroite); 
   delay(dureePostionnementServo);
 }

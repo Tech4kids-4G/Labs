@@ -17,8 +17,7 @@
     pinMode(IN4,OUTPUT);
     pinMode(ENA,OUTPUT);
     pinMode(ENB,OUTPUT);
-    digitalWrite(ENA,HIGH);  
-    digitalWrite(ENB,HIGH);   
+        
     SERVO.attach(PWM_SERVO);// attach servo on pin 3 to servo object   
     RegardeToutDroit();
     Serial.println("setup : Fin initiatiosation! ");   

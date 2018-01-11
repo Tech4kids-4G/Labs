@@ -4,14 +4,49 @@
 /*************************************************************/
 void AvanceEnLigneDroite()
 {
+  
+  // stope les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourArreter);
+  analogWrite(ENB,vitesseDesMoteursPourArreter);           
+ 
   digitalWrite(IN1,HIGH);      
   digitalWrite(IN2,LOW);         // left wheel goes forward
   digitalWrite(IN3,LOW);      
   digitalWrite(IN4,HIGH);         // right wheel goes forward
+  
   laVoitureEstAlArret = false;   
-// allumeLEDVerte(); 
+  
+  // démarrer les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourAvancerENLigneDroite);
+  analogWrite(ENB,vitesseDesMoteursPourAvancerENLigneDroite);
   Serial.println("go forward!");
 }
+
+/*************************************************************/
+/*   Fonction qui fait reculer la voiture en ligne droite    */
+/*   version adapté par Omar GUEMMI                          */
+/*************************************************************/
+void ReculeEnLigneDroite()
+{
+  
+  // stope les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourArreter);
+  analogWrite(ENB,vitesseDesMoteursPourArreter);           
+  
+  digitalWrite(IN1,LOW);      
+  digitalWrite(IN2,HIGH);         // left wheel goes backward
+  digitalWrite(IN3,HIGH);      
+  digitalWrite(IN4,LOW);          // right wheel goes backward
+  laVoitureEstAlArret = false;   
+
+ // avancer les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourAvancer);
+  analogWrite(ENB,vitesseDesMoteursPourAvancer);
+  
+// allumeLEDVerte(); 
+  Serial.println("go backward!");
+}
+
 
 /*************************************************/
 /*       Fonction qui stoppe la voiture          */
@@ -24,33 +59,38 @@ void Arret()
   digitalWrite(IN3,LOW);
   digitalWrite(IN4,LOW);  
  
-  digitalWrite(ENA,LOW);
-  digitalWrite(ENB,LOW);
+  // stope les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourArreter);
+  analogWrite(ENB,vitesseDesMoteursPourArreter);           
   
   laVoitureEstAlArret = true;  
   Serial.print("laVoitureEstAlArret: "); Serial.println(laVoitureEstAlArret);
 //  allumeLEDOrange(); 
 }
 
+
 /******************************************************/
-/*   Fonction qui fait pivoter la voiture à gauche    */
+/*   Fonction qui fait pivoter la voiture à droite    */
 /*       version adapté par Omar GUEMMI                */
 /******************************************************/
-void PivoteAGauche()
+void PivoteADroite()
 {
 
-  digitalWrite(IN1,HIGH);
-  digitalWrite(IN2,LOW);
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,HIGH);
+  
   digitalWrite(IN3,LOW);
   digitalWrite(IN4,HIGH);  
  
-  digitalWrite(ENA,HIGH);
-  digitalWrite(ENB,HIGH);
+ // avancer les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourAvancer);
+  analogWrite(ENB,vitesseDesMoteursPourAvancer);           
   
   delay(dureePourPivoter);
   
-  digitalWrite(ENA,LOW);
-  digitalWrite(ENB,LOW);
+  // stope les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourArreter);
+  analogWrite(ENB,vitesseDesMoteursPourArreter);           
   
   digitalWrite(IN1,LOW);
   digitalWrite(IN2,LOW);
@@ -63,25 +103,31 @@ void PivoteAGauche()
 }
 
 /******************************************************/
-/*   Fonction qui fait pivoter la voiture à droite    */
+/*   Fonction qui fait pivoter la voiture à gauche    */
 /*       version adapté par Omar GUEMMI               */
 /******************************************************/
-void PivoteADroite()
+void PivoteAGauche()
 {
 
-  digitalWrite(IN1,LOW);
-  digitalWrite(IN2,HIGH); 
+  digitalWrite(IN1,HIGH);
+  digitalWrite(IN2,LOW); 
   digitalWrite(IN3,HIGH);
   digitalWrite(IN4,LOW);  
 
+ // avancer les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourAvancer);
+  analogWrite(ENB,vitesseDesMoteursPourAvancer);           
   
   delay(dureePourPivoter);
   
-  digitalWrite(ENA,LOW);
-  digitalWrite(ENB,LOW);
+  // stope les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourArreter);
+  analogWrite(ENB,vitesseDesMoteursPourArreter);           
   
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,LOW);
   digitalWrite(IN3,LOW);
-  digitalWrite(IN4,LOW);  
+  digitalWrite(IN4,LOW);   
  
   
   laVoitureEstAlArret = true;  
@@ -96,28 +142,28 @@ void PivoteADroite()
 void DemiTour()
 {
 
-  digitalWrite(IN1,LOW);
-  digitalWrite(IN2,HIGH);
-  
+  digitalWrite(IN1,HIGH);
+  digitalWrite(IN2,LOW); 
   digitalWrite(IN3,HIGH);
   digitalWrite(IN4,LOW);  
 
-  digitalWrite(ENA,HIGH);
-  digitalWrite(ENB,HIGH);
+ // avancer les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourAvancer);
+  analogWrite(ENB,vitesseDesMoteursPourAvancer);           
   
   delay(dureeDunDemiTour);
   
-  digitalWrite(ENA,LOW);
-  digitalWrite(ENB,LOW);
+  // stope les 2moteurs
+  analogWrite(ENA,vitesseDesMoteursPourArreter);
+  analogWrite(ENB,vitesseDesMoteursPourArreter);           
   
   digitalWrite(IN1,LOW);
   digitalWrite(IN2,LOW);
-  
   digitalWrite(IN3,LOW);
-  digitalWrite(IN4,LOW);  
-
+  digitalWrite(IN4,LOW);   
+ 
   
-  laVoitureEstAlArret = true;  
+  laVoitureEstAlArret = false;  
   
-//  allumeLEDRouge();
+//  allumeLEDOrange();
 }

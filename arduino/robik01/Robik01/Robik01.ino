@@ -41,13 +41,10 @@ void setup() {Initialisation();}
 /*****************************************************************/
 
 void loop() {   
-//AvanceEnLigneDroite(); // ok
-//Arret(); ok 
-delay(500);
-PivoteAGauche();
+alogo1();
 }
 
-void loop123() {   
+void alogo1() {   
    RegardeToutDroit(); 
    if(LaVoieEstLibre())
    {

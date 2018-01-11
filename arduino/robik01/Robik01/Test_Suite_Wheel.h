@@ -29,3 +29,20 @@
     
     Serial.println("fin: test_left_right_wheel_goes_back! ");    
   }
+
+  void test_all (){
+    
+AvanceEnLigneDroite(); // ok
+delay(500);
+Arret(); //ok
+delay(500);
+DemiTour();
+delay(500);
+ReculeEnLigneDroite();
+delay(500);
+PivoteADroite();
+delay(500);
+PivoteAGauche();
+delay(500);
+  
+  }
