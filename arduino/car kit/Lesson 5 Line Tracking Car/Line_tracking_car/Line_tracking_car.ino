@@ -65,9 +65,12 @@ void setup()
 
 void loop() {
   int num1,num2,num3;
-  num1=digitalRead(10);    
+  num1=digitalRead(10);
+  Serial.print("num1: "); Serial.println(num1); 
   num2=digitalRead(4);
+  Serial.print("num2: "); Serial.println(num2);  
   num3=digitalRead(2); 
+  Serial.print("num3: "); Serial.println(num3);  
    if((num1==0)&&num2&&num3) 
    {
     _mleft();          //The sensor detected that right car turn left immediately when it meets black line 

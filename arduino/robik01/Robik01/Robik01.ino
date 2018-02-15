@@ -41,10 +41,10 @@ void setup() {Initialisation();}
 /*****************************************************************/
 
 void loop() {   
-alogo1();
+  chercheUneIssuePourRobik001();
 }
 
-void alogo1() {   
+void chercheUneIssuePourRobik001() {   
    RegardeToutDroit(); 
    if(LaVoieEstLibre())
    {

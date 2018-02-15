@@ -4,7 +4,7 @@
   
   void Initialisation()
   {
-    Serial.println("setup : début initiatiosation! ");    
+    Serial.println("setup : début initialisation! ");    
     Serial.begin(9600);     
     
     pinMode(DIN_ULTRASONIC_ECHO, INPUT);    
